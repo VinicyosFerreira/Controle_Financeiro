@@ -1,0 +1,475 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Lato;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    background-color: #e0e0e0;
+}
+
+.logo {
+    margin: 22px;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 22px;
+}
+
+
+.links {
+    display : none;
+    position: fixed;
+    top :0px;
+    right: 0px;
+    background-color: #333;
+    flex-direction: column;
+    list-style: none;
+    height: 100%;
+    width: 80%;
+
+}
+
+.menu:hover .links {
+    display: flex;
+}
+
+
+.links li {
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    text-align: right;
+    width: calc(100% - 40px);
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    padding-top: 12px;
+    height: 32px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.links li:hover {
+    background-color: #e0e0e0;
+    color : #333;
+    width: 94%;
+}
+
+.links .menu-close {
+    text-align: left;
+    font-size: 1.3em;
+}
+
+.links .menu-close a {
+    height: 43px;
+    padding-top: 22px;
+}
+
+
+/* Configuraçaõ da area de dados */
+.area-dados .titulo-form {
+    display: none;
+}
+
+
+.area-dados .formulario {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 20px 20px;
+    margin-top: 20px;
+}
+
+.area-dados .formulario label {
+    display: block;
+    margin-bottom: 0px;
+}
+
+.area-dados .formulario select{
+    width: 98.5%;
+    display: block;
+    padding: 10px;
+    margin: 10px auto 10px auto;
+    border-radius: 5px;
+    border: 1px solid rgba(77, 74, 74, 0.4);
+    color:black;
+}
+
+.area-dados .formulario input{
+    width: 92%;
+    display: block;
+    padding: 10px;
+    margin: 10px auto 10px auto;
+    border-radius: 5px;
+    border : 1px solid rgba(77, 74, 74, 0.4);
+}
+
+.area-dados .formulario button {
+    width: 98%;
+    display: block;
+    padding: 10px;
+    margin: 25px auto 20px auto;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.849);
+    border : 1px solid rgba(77, 74, 74, 0.5);
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.form-tablet {
+    display: none;
+}
+
+
+
+/* Configuraçaõ hr central e das linhas */
+hr {
+    margin: 5px 10px 10px 10px;
+}
+
+.linha {
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Configuração area extrato **/
+
+.extrato {
+    width: 98%;
+}
+
+.titulo-extrato {
+    text-align: center;
+    margin-top: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+td , th{
+    line-height: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.534);
+}
+
+.mercadoria{
+    text-align: left;
+    width: 50%;
+}
+
+.valor {
+    text-align: right;
+    width: 50%;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.total span {
+    margin-left: 45px;
+    font-size: 12px;
+}
+
+@media screen and (min-width : 500px){
+    .area-dados .formulario button {
+        width: 96%;
+    }
+
+    .area-dados .formulario select {
+        width: 96.7%;
+    }
+
+}
+
+@media screen and (min-width : 750px) {
+
+    .links a {
+        width: 90%;
+    }
+    
+    .links li:hover {
+        background-color: #e0e0e0;
+        color : #333;
+        width: 100%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    table {
+        width: 95%;
+        margin-left: 22px;
+    }
+
+
+    hr {
+        margin: 5px 22px 10px 22px;
+        width: 94.8%;
+    }
+
+    .area-dados {
+        display: none;
+    }
+
+    .form-tablet {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(0, 0, 0, 0.452);
+    }
+
+    .form-tablet .form-tablet-titulo {
+        text-align: center;
+        width: 100%;
+        line-height: 22px;
+        margin-top: 20px;
+    }
+
+    .form-tablet .dados-tablet-form {
+        display: flex;
+        flex-direction: row;
+        width: 92%;
+        height: 180px;
+        margin-left: 25px;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+
+    .form-tablet .dados-tablet-form label {
+        width: 150px;
+        height: 57px;
+    }
+
+    .form-tablet .dados-tablet-form select {
+        width: 160px;
+        height: 44px;
+        border-radius: 5px;
+    }
+
+    .form-tablet .dados-tablet-form label.label2 {
+        width: 320px;
+    }
+
+     .form-tablet .dados-tablet-form input#nome {
+        width: 320px;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+    .form-tablet .dados-tablet-form input {
+        width: 160px;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+    .botao {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+   
+    .form-tablet .dados-tablet-form button {
+       border-radius: 5px;
+       background-color: rgba(0, 0, 0, 0.849);
+       border : 1px solid rgba(77, 74, 74, 0.5);
+       color: #fff;
+       cursor: pointer;
+       font-size: 18px;
+       width: 220px;
+       height: 35px;
+       position: absolute;
+       bottom: -5px;
+       right : 2px;
+     
+    }
+
+    .menu:hover .links {
+      z-index: 1;
+    }
+    
+
+    .linha {
+        width: 95%;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+
+    .total span {
+        margin-right: 5px;
+        font-size: 12px;
+    }
+
+    .total p {
+        margin-left: 12px;
+    }
+
+
+}
+
+@media screen and (min-width : 820px){
+    .form-tablet .dados-tablet-form button {
+        bottom: -5px;
+        right: 8px;
+    }
+}
+
+@media screen and (min-width : 900px){
+    .form-tablet .dados-tablet-form button {
+        bottom: -5px;
+        right: 20px;
+    }
+}
+
+@media screen and (min-width : 992px){
+    .title {
+        text-align: left;
+        font-size: 25px;
+    }
+
+    header {
+        height: 80px;
+    }
+
+    .menu-toogle {
+        display: none;
+    }
+
+    .menu .links {
+        display: flex;
+        margin-top: 1px;
+        position: initial;
+        width: 400px;
+        flex-direction: row;
+        align-items: center;
+        height: 60px;
+        background-color: #fff;
+    }
+
+    .menu .menu-close {
+        display: none;
+    }
+
+    .menu .links li {
+        padding: initial;
+    }
+
+    .menu .links a {
+        color: black;
+        line-height: 30px;
+        padding-left: 15px;
+        text-align: center;
+    }
+
+    .menu .links li:hover{
+        background-color: #fff;
+    }
+
+
+    span {
+        position: relative;
+        left: 20px;
+        color: black;
+    }
+
+    .form-tablet{
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+    .area-dados {
+        display: block;
+        width: 35%;
+    }
+
+    .area-dados .formulario {
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 22px;
+        border: 1px solid rgba(0, 0, 0, 0.63);
+    }
+
+    .area-dados .titulo-form {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .area-extrato {
+        width: 65%;
+        margin-top: 22px;
+    }
+
+    .extrato .mercadoria {
+        line-height: 42px;
+    }
+
+
+    .linha {
+        display: none;
+    }
+
+    .total span {
+        margin-left: 20px;
+        font-size: 12px;
+    }
+
+    .total {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    hr {
+        margin: 5px 22px 10px 22px;
+        width: 94.7%;
+    }
+
+    .area-dados .formulario select{
+        width: 98%;
+    }
+
+    .area-dados .formulario button{
+        width: 97%;
+    }
+    
+}
+

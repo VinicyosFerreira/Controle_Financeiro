@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+</head>
+
+<body>
+
+    <header>
+
+        <img src="./imagem/logo.svg" alt="" class="logo">
+        <h1 class="title">Controle Financeiro</h1>
+        <div class="menu">
+            <img src="./imagem/menu.svg" alt="" class="menu-toogle">
+            <ul class="links">
+                <li class="menu-close"><a href="">X</a></li>
+                <li><a href="">Cadastro de transações</a></li>
+                <span>|</span>
+                <li><a href="">Limpar dados</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="area-dados">
+
+            <div class="formulario">
+
+                <div class="titulo-form">
+                    <h3>Nova transação</h3>
+                </div>
+                
+                <div class="dados-form">
+                    <label for="">Tipo de transação
+                        <select>
+                            <option valor="opcao1">Compras</option>
+                            <option valor="opcao2">Vendas</option>
+                        </select>
+                    </label>
+                    <label for="nome">Nome da mercadoria</label>
+                    <input type="text" placeholder="Input" id="nome">
+                    <label for="valor" class="label-valor">Valor</label>
+                    <input type="text" placeholder="R$ 0,00" id="valor">
+                    <button>Adicionar transação</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="form-tablet">
+            <div class="form-tablet-titulo">
+                <h2>Nova transação</h2>
+            </div>
+            <div class="dados-tablet-form">
+                <label for="">Tipo de transação
+                    <select>
+                        <option valor="opcao1">Compras</option>
+                        <option valor="opcao2">Vendas</option>
+                    </select>
+                </label>
+                <label class="label2" for="nome">Nome da mercadoria
+                    <input type="text" placeholder="Input" id="nome">
+                </label>
+                <label for="valor">Valor
+                    <input type="text" placeholder="R$ 0,00" id="valor">
+                </label>
+                <div class="botao">
+                  <button>Adicionar transação</button>
+                </div>
+            </div>
+        </div>
+
+        <img class="linha" src="./imagem/linha.svg" alt="">
+
+        <div class="area-extrato">
+
+            <div class="titulo-extrato">
+
+                <h3>Extrato de transações</h3>
+
+            </div>
+
+            <div class="extrato">
+
+                <table>
+
+                    <tr>
+                        <th class="mercadoria">Mercadoria</th>
+                        <th class="valor">Valor</th>
+                    </tr>
+
+
+                    <tr>
+                        <td class="mercadoria"> + Lorem ipsum dolor sit amet consectetur adipisicing elit</td>
+                        <td class="valor">R$12.999,99</td>
+                    </tr>
+
+                    <tr>
+                        <td class="mercadoria"> - Quis nostrud exercitation </td>
+                        <td class="valor">R$99,99</td>
+                    </tr>
+
+
+                    <tr>
+                        <td class="mercadoria"> + Lorem ipsum</td>
+                        <td class="valor">R$9,99</td>
+                    </tr>
+
+                </table>
+
+                <hr>
+
+                <div class="total">
+                    <p><strong>Total</strong></p>
+                    <p>R$12.909,99 <br> <span>[LUCRO]</span></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
