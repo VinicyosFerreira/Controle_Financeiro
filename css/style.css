@@ -246,12 +246,6 @@ td , th{
         flex-direction: column;
     }
 
-    table {
-        width: 95%;
-        margin-left: 22px;
-    }
-
-
     hr {
         margin: 5px 22px 10px 22px;
         width: 94.8%;
@@ -260,6 +254,11 @@ td , th{
     .area-dados {
         display: none;
     }
+
+    .menu:hover .links {
+        z-index: 1;
+      }
+      
 
     .form-tablet {
         display: flex;
@@ -318,10 +317,10 @@ td , th{
     .botao {
         position: relative;
         display: block;
-        width: 96%;
         margin-left: 22px;
-        min-width: 91%;
-        max-width: 93%;
+        min-width: 93%;
+        max-width: 91%;
+        width: 96%;
     }
 
    
@@ -339,10 +338,12 @@ td , th{
        right: -8px;
     }
 
-    .menu:hover .links {
-      z-index: 1;
-    }
     
+    table {
+        width: 95%;
+        margin-left: 22px;
+    }
+
 
     .linha {
         width: 97%;
@@ -411,22 +412,16 @@ td , th{
         background-color: #fff;
     }
 
-
-    span {
-        position: relative;
-        left: 20px;
-        color: black;
+    main {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
     }
 
     .form-tablet{
         display: none;
     }
 
-    main {
-        display: flex;
-        flex-direction: row;
-        margin-top: 20px;
-    }
 
     .area-dados {
         display: block;
@@ -446,6 +441,16 @@ td , th{
         width: 100%;
         text-align: center;
         margin-bottom: 15px;
+    
+    }
+
+    .area-dados .formulario select{
+        width: 98%;
+     
+    }
+
+    .area-dados .formulario button{
+        width: 97%;
     }
 
     .area-extrato {
@@ -453,10 +458,27 @@ td , th{
         margin-top: 22px;
     }
 
+    .area-extrato .titulo-extrato {
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
+     table {
+        border-collapse: collapse;
+        margin-left: 22px;
+        margin-right: 10px;
+        margin-top: 0px;
+
+    }
+    
     .extrato .mercadoria {
         line-height: 42px;
     }
 
+    hr {
+        margin: 5px 22px 10px 22px;
+        width: 94.7%;
+    }
 
     .linha {
         display: none;
@@ -472,18 +494,12 @@ td , th{
         margin-right: 20px;
     }
 
-    hr {
-        margin: 5px 22px 10px 22px;
-        width: 94.7%;
+    span {
+        position: relative;
+        left: 20px;
+        color: black;
     }
 
-    .area-dados .formulario select{
-        width: 98%;
-    }
-
-    .area-dados .formulario button{
-        width: 97%;
-    }
     
 }
 
