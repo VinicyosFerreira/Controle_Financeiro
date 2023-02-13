@@ -467,12 +467,12 @@ td , th{
         border-collapse: collapse;
         margin-left: 22px;
         margin-right: 10px;
-        margin-top: 0px;
+        margin-top: -4px;
 
     }
     
     .extrato .mercadoria {
-        line-height: 42px;
+        line-height: 35px;
     }
 
     hr {
