@@ -13,7 +13,6 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 70px;
-    width: 98%;
     background-color: #e0e0e0;
 }
 
@@ -161,8 +160,9 @@ hr {
 /* Configuração area extrato **/
 
 .extrato {
-    width: 98%;
+    width: 96%;
     margin-bottom: 15px;
+    margin-left: 5px;
 }
 
 .titulo-extrato {
@@ -197,24 +197,27 @@ td , th{
 .total {
     display: flex;
     justify-content: space-between;
-    margin-left: 10px;
     margin-right: 10px;
+    margin-left: 10px;
 }
-
 
 .total span {
     margin-left: 45px;
     font-size: 12px;
 }
 
-@media screen and (max-width : 360px) { 
-    header {
-        width: calc(100% + 5px);
-    }
-    
+@media screen and (max-width : 360px) {
     .area-dados .formulario input{
     width: 88%;
    }
+
+   .linha {
+    width: 92%;
+    border: 1px solid rgba(0, 0, 0, 0.116);
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (min-width : 500px){
@@ -229,7 +232,6 @@ td , th{
 }
 
 @media screen and (min-width : 750px) {
-
 
     .links a {
         width: 90%;
@@ -351,9 +353,12 @@ td , th{
         margin-right: 10px;
     }
 
+    .total{
+        margin-right: -7px;
+    }
 
     .total span {
-        margin-right: 5px;
+        margin-right: 20px;
         font-size: 12px;
     }
 
@@ -361,7 +366,12 @@ td , th{
         margin-left: 12px;
     }
 
+}
 
+@media screen and (min-width: 820px){
+    .total{
+        margin-right: 1.5px;
+    }
 }
 
 @media screen and (min-width : 992px){
@@ -474,7 +484,7 @@ td , th{
 
     hr {
         margin: 5px 22px 10px 22px;
-        width: 94.7%;
+        width: 94.8%;
     }
 
     .linha {
@@ -487,8 +497,8 @@ td , th{
     }
 
     .total {
-        margin-left: 20px;
-        margin-right: 20px;
+        margin-left: 12px;
+        width: 96.3%;
     }
 
     span {
