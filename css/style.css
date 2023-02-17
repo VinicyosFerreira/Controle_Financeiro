@@ -5,6 +5,13 @@
 
 body {
     font-family: Lato;
+    font-size: 14px;
+}
+
+.header{
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
 }
 
 header {
@@ -13,7 +20,19 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 70px;
+    width: 100%;
     background-color: #e0e0e0;
+    max-width: 1112px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    width: 100%;
+    max-width: 1112px;
 }
 
 .logo {
@@ -24,6 +43,8 @@ header {
     width: 100%;
     text-align: center;
     font-size: 20px;
+    font-weight: 600;
+    color: #333;
 }
 
 .menu {
@@ -60,6 +81,10 @@ header {
     width: calc(100% - 40px);
 }
 
+li span{
+    display: none;
+}
+
 .links a {
     text-decoration: none;
     color: white;
@@ -88,29 +113,29 @@ header {
 }
 
 
-/* Configuraçaõ da area de dados */
+/* Configuração da area de dados */
 .area-dados .titulo-form {
     display: none;
 }
 
 
-.area-dados .formulario {
+.area-dados .formulario{
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     padding: 10px 20px 20px 20px;
-    margin-top: 20px;
+    margin-top: 15px;
+
 }
 
 .area-dados .formulario label {
     display: block;
-    margin-bottom: 0px;
 }
 
 .area-dados .formulario select{
-    width: 98%;
+    width: 100%;
     display: block;
-    padding: 10px;
+    padding: 8px;
     margin: 10px auto 10px auto;
     border-radius: 5px;
     border: 1px solid rgba(77, 74, 74, 0.4);
@@ -118,70 +143,71 @@ header {
 }
 
 .area-dados .formulario input{
-    width: 92%;
+    width: calc(100% - 20px);
     display: block;
-    padding: 10px;
+    padding: 8px;
     margin: 10px auto 10px auto;
     border-radius: 5px;
     border : 1px solid rgba(77, 74, 74, 0.4);
 }
 
 .area-dados .formulario button {
-    width: 98%;
+    width: 100%;
     display: block;
-    padding: 10px;
-    margin: 25px auto 20px auto;
+    padding: 8px;
+    margin: 20px auto 20px auto;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.849);
-    border : 1px solid rgba(77, 74, 74, 0.5);
+    background-color : rgba(0, 0, 0, 0.849);
+    border : 1px solid rgba(77, 74, 74, 0.4);
     color: #fff;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
 }
 
-.form-tablet {
-    display: none;
+.botao{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0 , 0, 0.4);
 }
 
 
-
-/* Configuraçaõ hr central e das linhas */
+/* Configuração hr central*/
 hr {
-    margin: 5px 10px 10px 10px;
-}
-
-.linha {
-    width: 95%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 15px;
+    width: calc(100% - 24px);
+    margin-top: 3px;
 }
 
 /* Configuração area extrato **/
 
 .extrato {
-    width: 96%;
     margin-bottom: 15px;
-    margin-left: 5px;
+    font-size: 14px;
+    margin-left: 20px;
 }
 
 .titulo-extrato {
     text-align: center;
     margin-top: 15px;
     margin-left: 15px;
-    margin-bottom: 7px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 table {
     border-collapse: collapse;
-    margin-left: 10px;
-    margin-right: 10px;
     margin-top: 15px;
+    width: calc(100% - 22px);
 }
 
-td , th{
+th , td{
     line-height: 30px;
+    vertical-align: top;
     border-bottom: 1px solid rgba(0, 0, 0, 0.534);
+}
+
+.sinal{
+    width: 5%;
+    text-align: center;
 }
 
 .mercadoria{
@@ -191,56 +217,56 @@ td , th{
 
 .valor {
     text-align: right;
-    width: 50%;
+    width: 15%;
 }
 
-.total {
+th.valor{
+    text-align: center;
+}
+
+table.total td , tr{
+    border: none;
+}
+
+table.total{
+    margin-top: 5px;
+}
+
+.empty{
+    width: 5%;
+}
+
+.lucro-prejuizo{
+    width: calc(100% - 22px);
     display: flex;
-    justify-content: space-between;
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-.total span {
-    margin-left: 45px;
+    justify-content: flex-end;
+    margin-top: -8px;
     font-size: 12px;
 }
 
-@media screen and (max-width : 360px) {
-    .area-dados .formulario input{
-    width: 88%;
-   }
-
-   .linha {
-    width: 92%;
-    border: 1px solid rgba(0, 0, 0, 0.116);
-    margin-left: 10px;
-    margin-right: 5px;
-    margin-bottom: 15px;
-  }
+.lucro-prejuizo p{
+    padding-right: 5px;
 }
 
-@media screen and (min-width : 500px){
-    .area-dados .formulario button {
-        width: 96%;
-    }
+@media screen and (min-width : 680px) {
 
-    .area-dados .formulario select {
-        width: 96.7%;
-    }
-
-}
-
-@media screen and (min-width : 750px) {
-
-    .links a {
-        width: 90%;
+    .area-dados .titulo-form {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+        font-weight: 700px;
+        font-size: 16px;
+        margin-left: 10px;
     }
     
-    .links li:hover {
-        background-color: #e0e0e0;
-        color : #333;
-        width: 100%;
+
+    .links{
+        width: 33%;
+    }
+
+    li span{
+        display: none;
     }
 
     main {
@@ -248,134 +274,68 @@ td , th{
         flex-direction: column;
     }
 
-    hr {
-        margin: 5px 22px 10px 22px;
-        width: 94.8%;
+    th.valor{
+        text-align: right;
     }
 
-    .area-dados {
-        display: none;
+    /* Configuração área dados do tablet */
+
+    .area-dados .formulario{
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        margin: 20px;
     }
 
-    .menu:hover .links {
-        z-index: 1;
-      }
-      
-
-    .form-tablet {
-        display: flex;
-        flex-direction: column;
-        border: 1px solid rgba(0, 0, 0, 0.452);
-        margin-bottom: 35px;
-        
-    }
-
-    .form-tablet .form-tablet-titulo {
-        text-align: center;
-        width: 100%;
-        line-height: 22px;
-        margin-top: 20px;
-    }
-
-    .form-tablet .dados-tablet-form {
-        display: flex;
+    .dados-form{
+        display: flex;    
         flex-direction: row;
-        width: 92%;
-        height: 180px;
-        margin-left: 25px;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        
+        justify-content: space-between;
     }
 
-    .form-tablet .dados-tablet-form label {
-        width: 150px;
-        height: 57px;
+    .area-dados .formulario #select{
+      width: 23%;
     }
 
-    .form-tablet .dados-tablet-form select {
-        width: 160px;
-        height: 44px;
-        border-radius: 5px;
-    }
-
-    .form-tablet .dados-tablet-form label.label2 {
-        width: 320px;
-    }
-
-     .form-tablet .dados-tablet-form input#nome {
-        width: 320px;
-        height: 40px;
-        border-radius: 5px;
-    }
-
-    .form-tablet .dados-tablet-form input {
-        width: 160px;
-        height: 40px;
-        border-radius: 5px;
-    }
-
-    .botao {
-        position: relative;
-        display: block;
-        margin-left: 22px;
-        min-width: 93%;
-        max-width: 91%;
-        width: 96%;
-    }
-
-   
-    .form-tablet .dados-tablet-form button {
-       border-radius: 5px;
-       background-color: rgba(0, 0, 0, 0.849);
-       border : 1px solid rgba(77, 74, 74, 0.5);
-       color: #fff;
-       cursor: pointer;
-       font-size: 18px;
-       width: 220px;
-       height: 35px;
-       position: absolute;
-       bottom: -5px;
-       right: -8px;
-    }
-
+    .area-dados .formulario #input1{
+        width: 52%;
+        margin: 0px 15px 0px 15px;
+      }
     
-    table {
-        width: 95%;
-        margin-left: 22px;
+    .area-dados .formulario #input2{
+        width: 23%;
     }
 
-
-    .linha {
-        width: 97%;
-        margin-left: 10px;
-        margin-right: 10px;
+    .botao{
+        width: 100%;
+        border: none;
+        padding: 0px;
+        display: flex;
+        justify-content: flex-end;
     }
 
-    .total{
-        margin-right: -7px;
+    .area-dados .formulario button {
+        width: 28%;
+        border: 1px solid black;
+        margin: 10px 0px 10px 0px;
+    }
+    
+
+    /* Configuração area extrato */
+    .sinal{
+        width: 5%;
+        text-align: center;
+        padding-left: 3px;
     }
 
-    .total span {
-        margin-right: 20px;
-        font-size: 12px;
+    .empty{
+        width: 5%;
     }
 
-    .total p {
-        margin-left: 12px;
-    }
-
-}
-
-@media screen and (min-width: 820px){
-    .total{
-        margin-right: 1.5px;
+    .mercadoria{
+        width: 25%;
     }
 }
 
 @media screen and (min-width : 992px){
-
     .title {
         text-align: left;
         font-size: 25px;
@@ -406,12 +366,24 @@ td , th{
 
     .menu .links li {
         padding: initial;
+        width: calc(100% - 40px);
     }
 
     .menu .links a {
         color: black;
-        line-height: 30px;
-        padding-left: 15px;
+        line-height: 22px;
+    }
+
+    li span{
+        display: inline;
+        padding-right: 40px;
+    }
+
+    li:nth-child(2){
+        text-align: right;
+    }
+
+    li:nth-child(3){
         text-align: center;
     }
 
@@ -425,21 +397,18 @@ td , th{
         margin-top: 20px;
     }
 
-    .form-tablet{
-        display: none;
-    }
-
+    /* Configuração área dados*/
 
     .area-dados {
         display: block;
-        width: 35%;
+        width: 40%;
     }
 
     .area-dados .formulario {
         border-radius: 5px;
         display: flex;
         flex-direction: column;
-        margin-left: 22px;
+        margin-left: 20px;
         border: 1px solid rgba(0, 0, 0, 0.63);
     }
 
@@ -448,21 +417,49 @@ td , th{
         width: 100%;
         text-align: center;
         margin-bottom: 15px;
-    
+        margin-left: 0px;
     }
 
-    .area-dados .formulario select{
-        width: 98%;
-     
+    .dados-form{
+        display: flex;    
+        flex-direction: column;
+    }
+
+    .area-dados .formulario #select{
+      width: 100%;
+    }
+
+    .area-dados .formulario #input1{
+        width: 100%;
+        margin: 0px;
+      }
+      
+    
+    .area-dados .formulario #input2{
+        width: 100%;
     }
 
     .area-dados .formulario button{
-        width: 97%;
+        margin: 10px 0px 10px 0px;
+        width: 100%;
     }
 
+    .botao{
+        display: block;
+        width: 100%;
+        border: none;
+    }
+
+
+    /* Configuração área extrato */
+
     .area-extrato {
-        width: 65%;
-        margin-top: 22px;
+        width: 60%;
+        margin-top: 20px;
+    }
+
+    .mercadoria{
+        width: 30%;
     }
 
     .area-extrato .titulo-extrato {
@@ -470,43 +467,5 @@ td , th{
         margin-bottom: 15px;
     }
 
-     table {
-        border-collapse: collapse;
-        margin-left: 22px;
-        margin-right: 10px;
-        margin-top: -4px;
-
-    }
-    
-    .extrato .mercadoria {
-        line-height: 35px;
-    }
-
-    hr {
-        margin: 5px 22px 10px 22px;
-        width: 94.8%;
-    }
-
-    .linha {
-        display: none;
-    }
-
-    .total span {
-        margin-left: 20px;
-        font-size: 12px;
-    }
-
-    .total {
-        margin-left: 12px;
-        width: 96.3%;
-    }
-
-    span {
-        position: relative;
-        left: 20px;
-        color: black;
-    }
-
-    
 }
 
