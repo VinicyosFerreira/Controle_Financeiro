@@ -269,6 +269,11 @@ table.total{
         display: none;
     }
 
+    .container{
+        height: 88vh;
+        border-bottom: 8px solid black;
+    }
+
     main {
         display: flex;
         flex-direction: column;
@@ -391,11 +396,17 @@ table.total{
         background-color: #fff;
     }
 
+    .container{
+        height: 90.3vh;
+        border-bottom: 8px solid black;
+    }
+
     main {
         display: flex;
         flex-direction: row;
         margin-top: 20px;
     }
+
 
     /* Configuração área dados*/
 
