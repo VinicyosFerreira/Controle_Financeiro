@@ -269,11 +269,6 @@ table.total{
         display: none;
     }
 
-    .container{
-        height: 88vh;
-        border-bottom: 8px solid black;
-    }
-
     main {
         display: flex;
         flex-direction: column;
@@ -394,11 +389,6 @@ table.total{
 
     .menu .links li:hover{
         background-color: #fff;
-    }
-
-    .container{
-        height: 90.3vh;
-        border-bottom: 8px solid black;
     }
 
     main {
