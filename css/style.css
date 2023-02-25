@@ -3,6 +3,7 @@
     padding: 0px;
 }
 
+
 body {
     font-family: Lato;
     font-size: 15px;
@@ -53,6 +54,11 @@ main{
     justify-content: center;
     height: 100%;
     margin: 22px;
+}
+
+.menu img{
+    height: 25px;
+    width: 25px;
 }
 
 
@@ -205,13 +211,13 @@ th , td{
 }
 
 .sinal{
-    width: 7%;
+    width: 8%;
     text-align: center;
 }
 
 .mercadoria{
     text-align: left;
-    width: 50%;
+    width: 53%;
 }
 
 .valor {
@@ -232,7 +238,7 @@ table.total{
 }
 
 .empty{
-    width: 7%;
+    width: 8%;
 }
 
 .lucro-prejuizo{
@@ -244,10 +250,10 @@ table.total{
 }
 
 .lucro-prejuizo p{
-    padding-right: 5px;
+    padding-right: 1.5px;
 }
 
-@media screen and (min-width : 680px) {
+@media screen and (min-width : 655px) {
 
     .area-dados .titulo-form {
         display: block;
@@ -466,6 +472,5 @@ table.total{
         margin-top: 5px;
         margin-bottom: 15px;
     }
-
 }
 
