@@ -3,12 +3,11 @@
     padding: 0px;
 }
 
-
 body {
     font-family: Lato;
     font-size: 15px;
 }
-
+  
 .header{
     background-color: #e0e0e0;
     display: flex;
@@ -265,7 +264,6 @@ table.total{
         margin-left: 10px;
     }
     
-
     .links{
         width: 33%;
     }
@@ -381,7 +379,10 @@ table.total{
 
     li span{
         display: inline;
-        padding-right: 40px;
+        text-align: center;
+        margin-right: 28px;
+        margin-left: 12px;
+        color: black;
     }
 
     li:nth-child(2){
@@ -389,7 +390,7 @@ table.total{
     }
 
     li:nth-child(3){
-        text-align: center;
+        text-align: left;
     }
 
     .menu .links li:hover{
@@ -473,4 +474,7 @@ table.total{
         margin-bottom: 15px;
     }
 }
+
+
+
 
