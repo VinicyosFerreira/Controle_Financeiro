@@ -1,0 +1,46 @@
+/*
+function testaCampoValor(evento){
+    evento.preventDefault();
+    console.log(evento);
+
+    if (evento.target.value.length == 0){
+        evento.target.value += 'R'
+    }
+
+    if (evento.target.value.length == 1){
+         evento.target.value += '$'
+    }
+
+    if ((/[0-9 R$ , .]/g).test(evento.key) && evento.target.value.length < 15) {
+        evento.target.value += evento.key;
+    }
+}*/
+
+let pegaExtrato = localStorage.getItem('extrato');
+
+if (pegaExtrato != null) {
+    var extrato = JSON.parse(pegaExtrato);
+} else {
+    var extrato = [];
+}
+
+tabelaExtrato();
+
+function tabelaExtrato () {
+    linhasExistentes = [...document.querySelectorAll(".conteudo-dinamico")];
+
+    linhasExistentes.forEach(element => {
+        element.remove();
+        console.log(linhasExistentes);
+    })
+
+    for (var i = 0; i < extrato.length ; i++) {
+        document.querySelector(".table-extrato").innerHTML += 
+       
+        var valor = parseFloat(extrato[i].valor.replace(/[R$ .]/g, ''));;
+    }
+}
+
+
+
+/*

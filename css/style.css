@@ -28,6 +28,7 @@ header {
 .container{
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 
 main{
@@ -219,13 +220,19 @@ th , td{
     width: 53%;
 }
 
-.valor {
-    text-align: right;
-    width: 15%;
+th.valor {
+    width: 20%;
+    text-align: left;
 }
 
-th.valor{
-    text-align: center;
+.valor{
+    width: 20%;
+    text-align: left;
+}
+
+.valor-total{
+    width: 20%;
+    text-align: left;
 }
 
 table.total td , tr{
@@ -241,19 +248,16 @@ table.total{
 }
 
 .lucro-prejuizo{
-    width: calc(100% - 22px);
+    width: calc(100% - 12%);
     display: flex;
     justify-content: flex-end;
-    margin-top: -8px;
-    font-size: 12px;
+    margin-top: 2px;
+    font-size: 11px;
+    text-align: center;
 }
 
-.lucro-prejuizo p{
-    padding-right: 1.5px;
-}
 
 @media screen and (min-width : 655px) {
-
     .area-dados .titulo-form {
         display: block;
         width: 100%;
@@ -277,10 +281,6 @@ table.total{
         flex-direction: column;
     }
 
-    th.valor{
-        text-align: right;
-    }
-
     /* Configuração área dados do tablet */
 
     .area-dados .formulario{
@@ -295,13 +295,13 @@ table.total{
     }
 
     .area-dados .formulario #select{
-      width: 23%;
+       width: 23%;
     }
 
     .area-dados .formulario #input1{
         width: 52%;
         margin: 0px 15px 0px 15px;
-      }
+    }
     
     .area-dados .formulario #input2{
         width: 23%;
@@ -324,18 +324,35 @@ table.total{
 
     /* Configuração area extrato */
     .sinal{
-        width: 5%;
+        width: 8%;
         text-align: center;
         padding-left: 3px;
     }
 
     .empty{
-        width: 5%;
+        width: 8%;
     }
 
     .mercadoria{
-        width: 25%;
+        width: 50%;
     }
+
+    th.valor {
+        text-align: right;
+    }
+    
+    .valor{
+        text-align: right;
+    }
+    
+    .valor-total{
+        text-align: right;
+    }
+
+    .lucro-prejuizo{
+        width: calc(100% - 22px);
+    }
+
 }
 
 @media screen and (min-width : 992px){
@@ -441,7 +458,6 @@ table.total{
         margin: 0px;
       }
       
-    
     .area-dados .formulario #input2{
         width: 100%;
     }
@@ -459,14 +475,17 @@ table.total{
 
 
     /* Configuração área extrato */
-
     .area-extrato {
         width: 60%;
         margin-top: 20px;
     }
 
     .mercadoria{
-        width: 30%;
+        width: 50%;
+    }
+
+    .lucro-prejuizo{
+        width: calc(100% - 22px);
     }
 
     .area-extrato .titulo-extrato {
@@ -474,7 +493,5 @@ table.total{
         margin-bottom: 15px;
     }
 }
-
-
 
 

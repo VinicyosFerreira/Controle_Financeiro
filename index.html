@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle Financeiro</title>
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <!--<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>-->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -20,8 +20,8 @@
                 <img src="./imagem/menu.svg" alt="" class="menu-toogle">
                 <ul class="links">
                     <li class="menu-close"><a href="">X</a></li>
-                    <li><a href="">Cadastro de transações</a></li>
-                    <li><a href=""><span>|</span>Limpar dados</a></li>
+                    <li><a href="" class="cadastroTransacoes" onclick="cadastro(event)">Cadastro de transações</a></li>
+                    <li><a href="" onclick="limparDados(event)"><span>|</span>Limpar dados</a></li>
                 </ul>
             </div>
 
@@ -38,29 +38,34 @@
                 <div class="titulo-form">
                     <h3>Nova transação</h3>
                 </div>
-                
+              
+            <form action="" onsubmit="testaFormulario(event)">
                 <div class="dados-form">
                     <div id="select">
                         <label for="">Tipo de transação</label>
-                        <select>
-                            <option valor="opcao1">Compras</option>
-                            <option valor="opcao2">Vendas</option>
+                        <select class="select" required>
+                            <option valor="Compras">Compras</option>
+                            <option valor="Vendas">Vendas</option>
                         </select>
                     </div>
 
                     <div id="input1">
                         <label for="nome">Nome da mercadoria</label>
-                        <input type="text" placeholder="Input" id="nome">
+                        <input type="text" placeholder="Input" 
+                        id="nome" required maxlength="25">
                     </div>
                     <div id="input2">
                         <label for="valor">Valor</label>
-                        <input type="text" placeholder="R$ 0,00" id="valor">
+                        <input type="text" placeholder="R$ 0,00" 
+                        id="valor" required onkeyup="mascara(event)" 
+                        onkeydown="apenasNumeros(event)">
                     </div>
                 </div>
 
                 <div class="botao">
                     <button>Adicionar transação</button>
                 </div>
+            </form>
 
             </div>
         </div>
@@ -75,42 +80,15 @@
 
             <div class="extrato">
 
-                <table>
-
-                    <tr>
-                        <td></td>
-                        <th class="mercadoria">Mercadoria</th>
-                        <td></td>
-                        <th class="valor">Valor</th>
-                    </tr>
-
-
-                    <tr>
-                        <td class="sinal">+</td>
-                        <td class="mercadoria primeira-mercadoria">Lorem ipsum dolor sit amet consectetur</td>
-                        <td></td>
-                        <td class="valor">R$12.999,99</td>
-
-                    </tr>
-
-                    <tr>
-                        <td class="sinal">-</td>
-                        <td class="mercadoria"> Quis nostrud exercitation </td>
-                        <td></td>
-                        <td class="valor">R$99,99</td>
-                    </tr>
-
-
-                    <tr>
-                        <td class="sinal">+</td>
-                        <td class="mercadoria">Lorem ipsum</td>
-                        <td></td>
-                        <td class="valor">R$9,99</td>
-                    </tr>
-
-
+                <table class="table-extrato">
+                        <tr>
+                            <td class="sinal"></td>
+                            <th class="mercadoria titulo-mercadoria">Mercadoria</th>
+                            <td></td>
+                            <th class="valor">Valor</th>
+                        </tr>
                 </table>
-
+                
                 <hr>
 
                 <table class="total">
@@ -118,23 +96,25 @@
                         <td class="empty"></td>
                         <td class="mercadoria"><strong>Total</strong></td>
                         <td></td>
-                        <td class="valor">R$12.909,99</td>
+                        <td class="valor-total" maxlenght="20"></td>
                     </tr>
                 </table>
 
                 <div class="lucro-prejuizo">
-                    <p>[LUCRO]</p>
                 </div>
                 
-                </div>
+           </div>
                 
                  
-            </div>
+        </div>
 
         </main>
+
     </div>
 
     <footer></footer>
+
+    <script src="./js/index.js"></script>
 
 </body>
 </html>
