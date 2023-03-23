@@ -16,37 +16,44 @@ function tabelaExtrato() {
     })
 
     var valorTotal = 0;
-    var select = document.querySelector(".select");
 
     for(i in extrato) {
-            document.querySelector('.table-extrato').innerHTML += 
+            document.querySelector('.table-extrato tbody').innerHTML += 
             `<tr class="conteudo-dinamico">
                 <td class="sinal">${extrato[i].sinal}</td>
                 <td class="mercadoria">${extrato[i].mercadoria}</td>
                 <td></td>
                 <td class="valor">${extrato[i].valor}</td>
-            <tr>`
+                <td class="td-aux"></td>   
+            </tr>`
       
-            if (select.value == 'Vendas') {
+            if (extrato[i].sinal == '+') {
                 valorTotal += parseFloat(extrato[i].valor.replaceAll('.' , '').replace(',' , '.').replaceAll('R$' , ''));
             } else {
-                valorTotal = valorTotal - parseFloat(extrato[i].valor.replaceAll('.' , '').replace(',' , '.').replaceAll('R$' , ''));
-            }
-               
+                valorTotal -= parseFloat(extrato[i].valor.replaceAll('.' , '').replace(',' , '.').replaceAll('R$' , ''));
+            } 
+    }
+
+    let frase = document.querySelector('.lucro-prejuizo');
+   
+    if (!valorTotal) {
+        frase.innerHTML = `<p></p>`
+    } else if (valorTotal > 0 && !valorTotal ) {
+        frase.innerHTML = `<p>[LUCRO]</p>`
+    } else if (valorTotal < 0 && !valorTotal ) {
+        frase.innerHTML = `<p>[PREJUIZO]</p>`
     }
 
     document.querySelector('.valor-total').innerHTML = 
-    `<td class="valor-total">R$ ${valorTotal.toLocaleString('pt-BR')}</td>`
-
-        let frase = document.querySelector('.lucro-prejuizo');
-        if (valorTotal > 0 && valorTotal != 0) {
-           frase.innerHTML = `<p>[LUCRO]</p>`
-        } else if (valorTotal != 0){
-           frase.innerHTML = `<p>[PREJUÍZO]</p>`
-        }
+    `<td class="valor-total">R$ ${valorTotal.toLocaleString()}</td>`
 }
-
 function testaFormulario(e) {
+
+    /*
+        if (e.target.elements['valor'].value.length > 18) {
+            alert('Você está digitando um numero maior que permitido')
+            return;
+        }*/
     
         if (e.target.elements[0].value === "Compras") {
             extrato.push({
@@ -72,6 +79,7 @@ function testaFormulario(e) {
 }
 function limparDados(r){
     if (window.confirm("Deseja limpar os dados do extrato ?") == true) {
+        r.preventDefault();
         extrato.splice(r);
         tabelaExtrato();
         localStorage.setItem('extrato' , JSON.stringify(extrato));
@@ -93,22 +101,13 @@ function apenasNumeros(e) {
 
 function mascara (e) {
     e.preventDefault();
-
+    
     var valor = e.target.value.replace(/\D/g , '');
-    valor = (valor / 100).toFixed(2) + '';
+    valor = (valor / 100).toFixed(2) + ''; 
     valor = valor.replace('.' , ',');
     valor = valor.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
     e.target.value = 'R$ ' + valor;
-
-    /* Outra forma de fazer a mascara
-        var valor = e.target.value;
-        valor = valor.replaceAll('.' , '').replace(',' , '').replaceAll('R$' , '')
-
-        valor = valor.replace(/([0-9]{2})$/gi , ',$1');
-        valor = parseFloat(valor);
-        e.target.value = valor.toLocaleString('pt-BR' , {style : 'currency' , currency : 'BRL'});
-    */
-
+    
 }
 
 function cadastro(evento) {

@@ -211,29 +211,30 @@ th , td{
 }
 
 .sinal{
-    width: 8%;
+    width: 7%;
     text-align: center;
 }
 
 .mercadoria{
     text-align: left;
-    width: 53%;
+    width: 40%;
 }
 
 th.valor {
-    width: 20%;
-    text-align: left;
+    width: 45%;
+    text-align: right;
 }
 
 .valor{
-    width: 20%;
-    text-align: left;
+    width: 45%;
+    text-align: right;
 }
 
 .valor-total{
-    width: 20%;
-    text-align: left;
+    width: 45%;
+    text-align: right;
 }
+
 
 table.total td , tr{
     border: none;
@@ -243,12 +244,13 @@ table.total{
     margin-top: 5px;
 }
 
-.empty{
-    width: 8%;
+
+.td-aux{
+    width: 2%;
 }
 
 .lucro-prejuizo{
-    width: calc(100% - 12%);
+    width: calc(100% - 7%);
     display: flex;
     justify-content: flex-end;
     margin-top: 2px;
@@ -307,6 +309,11 @@ table.total{
         width: 23%;
     }
 
+    .mercadoria{
+        text-align: left;
+        width: 20%;
+    }
+
     .botao{
         width: 100%;
         border: none;
@@ -323,34 +330,12 @@ table.total{
     
 
     /* Configuração area extrato */
-    .sinal{
-        width: 8%;
-        text-align: center;
-        padding-left: 3px;
-    }
-
-    .empty{
-        width: 8%;
-    }
-
-    .mercadoria{
-        width: 50%;
-    }
-
-    th.valor {
-        text-align: right;
-    }
-    
-    .valor{
-        text-align: right;
-    }
-    
-    .valor-total{
-        text-align: right;
-    }
-
     .lucro-prejuizo{
-        width: calc(100% - 22px);
+        width: calc(100% - 5%);
+    }
+
+    .sinal{
+        width: 5%;
     }
 
 }
@@ -480,12 +465,8 @@ table.total{
         margin-top: 20px;
     }
 
-    .mercadoria{
-        width: 50%;
-    }
-
     .lucro-prejuizo{
-        width: calc(100% - 22px);
+        width: calc(100% - 6%);
     }
 
     .area-extrato .titulo-extrato {

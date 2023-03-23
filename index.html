@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle Financeiro</title>
-    <!--<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>-->
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -43,7 +43,7 @@
                 <div class="dados-form">
                     <div id="select">
                         <label for="">Tipo de transação</label>
-                        <select class="select" required>
+                        <select required>
                             <option valor="Compras">Compras</option>
                             <option valor="Vendas">Vendas</option>
                         </select>
@@ -52,13 +52,13 @@
                     <div id="input1">
                         <label for="nome">Nome da mercadoria</label>
                         <input type="text" placeholder="Input" 
-                        id="nome" required maxlength="25">
+                        id="nome" required>
                     </div>
                     <div id="input2">
                         <label for="valor">Valor</label>
                         <input type="text" placeholder="R$ 0,00" 
                         id="valor" required onkeyup="mascara(event)" 
-                        onkeydown="apenasNumeros(event)">
+                        onkeydown="apenasNumeros(event)" maxlength="17">
                     </div>
                 </div>
 
@@ -83,36 +83,35 @@
                 <table class="table-extrato">
                         <tr>
                             <td class="sinal"></td>
-                            <th class="mercadoria titulo-mercadoria">Mercadoria</th>
+                            <th class="mercadoria">Mercadoria</th>
                             <td></td>
                             <th class="valor">Valor</th>
+                            <td class="td-aux"></td>
                         </tr>
                 </table>
                 
                 <hr>
 
                 <table class="total">
-                    <tr>
-                        <td class="empty"></td>
-                        <td class="mercadoria"><strong>Total</strong></td>
-                        <td></td>
-                        <td class="valor-total" maxlenght="20"></td>
-                    </tr>
+                        <tr>
+                            <td class="sinal"></td>
+                            <td class="mercadoria"><strong>Total</strong></td>
+                            <td></td>
+                            <td class="valor-total"></td>
+                            <td class="td-aux"></td>
+                        </tr>
                 </table>
 
                 <div class="lucro-prejuizo">
                 </div>
                 
            </div>
-                
                  
         </div>
 
         </main>
 
     </div>
-
-    <footer></footer>
 
     <script src="./js/index.js"></script>
 
