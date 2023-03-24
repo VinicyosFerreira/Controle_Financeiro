@@ -22,9 +22,7 @@ function tabelaExtrato() {
             `<tr class="conteudo-dinamico">
                 <td class="sinal">${extrato[i].sinal}</td>
                 <td class="mercadoria">${extrato[i].mercadoria}</td>
-                <td></td>
-                <td class="valor">${extrato[i].valor}</td>
-                <td class="td-aux"></td>   
+                <td class="valor">${extrato[i].valor}</td>   
             </tr>`
       
             if (extrato[i].sinal == '+') {
@@ -38,9 +36,9 @@ function tabelaExtrato() {
    
     if (!valorTotal) {
         frase.innerHTML = `<p></p>`
-    } else if (valorTotal > 0 && !valorTotal ) {
+    } else if (valorTotal > 0) {
         frase.innerHTML = `<p>[LUCRO]</p>`
-    } else if (valorTotal < 0 && !valorTotal ) {
+    } else if (valorTotal < 0) {
         frase.innerHTML = `<p>[PREJUIZO]</p>`
     }
 
