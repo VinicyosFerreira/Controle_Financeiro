@@ -105,7 +105,6 @@ li span{
 .links li:hover {
     background-color: #e0e0e0;
     color : #333;
-    width: 94%;
 }
 
 .links .menu-close {
@@ -332,7 +331,7 @@ table.total{
     }
 
     .sinal{
-        width: 5%;
+        width: 3%;
     }
 
 }
