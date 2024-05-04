@@ -10,23 +10,35 @@
 </head>
 
 <body>
-
     <div class="header">
-        <header>
 
+        <div id="modal">
+            <p>Deseja limpar os dados do extrato ?</p>
+            <div id="confirmacao">
+                <button id="btn-confirmar">SIM</button>
+                <button id="btn-cancelar">NÃO</button>
+            </div>
+        </div>
+        <div id="sobreposicao"></div>
+    
+        <header>
             <img src="./imagem/logo.svg" alt="" class="logo">
             <h3 class="title">Controle financeiro</h3>
             <div class="menu">
-                <img src="./imagem/menu.svg" alt="" class="menu-toogle">
+                <img src="./imagem/menu.svg" alt="" class="menu-toggle">
                 <ul class="links">
-                    <li class="menu-close"><a href="">X</a></li>
-                    <li><a href="" class="cadastroTransacoes" onclick="cadastro(event)">Cadastro de transações</a></li>
-                    <li><a href="" onclick="limparDados(event)"><span>|</span>Limpar dados</a></li>
+                    <li class="menu-close"><a>X</a></li>
+                    <li><a href="" onclick="return false">Cadastro de transações</a></li>
+                    <li>
+                        <a href="" class="limparDados" onclick="limparDados(event)">
+                        <span>|</span>Limpar dados</a>
+                    </li>
                 </ul>
             </div>
-
         </header>
     </div>
+
+
 
   <div class="container">
     <main>

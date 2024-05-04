@@ -9,9 +9,9 @@ else {
 tabelaExtrato();
 
 function tabelaExtrato() {
-    linhasExistentes = [...document.querySelectorAll(".conteudo-dinamico")];
+     linhasExistentes = [...document.querySelectorAll(".conteudo-dinamico")];
 
-    linhasExistentes.forEach(element => {
+     linhasExistentes.forEach(element => {
         element.remove();
     })
 
@@ -45,13 +45,8 @@ function tabelaExtrato() {
     document.querySelector('.valor-total').innerHTML = 
     `<td class="valor-total">R$ ${valorTotal.toLocaleString()}</td>`
 }
-function testaFormulario(e) {
 
-    /*
-        if (e.target.elements['valor'].value.length > 18) {
-            alert('Você está digitando um numero maior que permitido')
-            return;
-        }*/
+function testaFormulario(e) {
     
         if (e.target.elements[0].value === "Compras") {
             extrato.push({
@@ -75,17 +70,33 @@ function testaFormulario(e) {
 
     localStorage.setItem('extrato' , JSON.stringify(extrato));
 }
-function limparDados(r){
-    if (window.confirm("Deseja limpar os dados do extrato ?") == true) {
-        r.preventDefault();
-        extrato.splice(r);
-        tabelaExtrato();
-        localStorage.setItem('extrato' , JSON.stringify(extrato));
-    } else {
-        r.preventDefault();
-    }
 
+function limparDados(e){
+        e.preventDefault();
+        const modal = document.querySelector('#modal');
+        const btnConfirmar= document.querySelector('#btn-confirmar');
+        const btnCancelar = document.querySelector('#btn-cancelar');
+        const sobreposicao = document.querySelector('#sobreposicao');
+
+        modal.style.display = 'flex';
+        sobreposicao.style.display = 'block';
+
+        btnConfirmar.addEventListener('click' , () => {
+            extrato.splice(0 , extrato.length);
+            tabelaExtrato();
+            localStorage.setItem('extrato' , JSON.stringify(extrato));
+            modal.style.display = 'none';
+            sobreposicao.style.display = 'none';
+        })
+
+        btnCancelar.addEventListener('click' , () => {
+            e.preventDefault();
+            modal.style.display = 'none';
+            sobreposicao.style.display = 'none';
+        })
+     
 }
+
 
 function apenasNumeros(e) {
     if 
@@ -99,19 +110,33 @@ function apenasNumeros(e) {
 
 function mascara (e) {
     e.preventDefault();
-    
     var valor = e.target.value.replace(/\D/g , '');
     valor = (valor / 100).toFixed(2) + ''; 
     valor = valor.replace('.' , ',');
     valor = valor.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
-    e.target.value = 'R$ ' + valor;
+    e.target.value = 'R$ ' + valor;   
+}
+
+
+function toggle () {
+    const menu_toggle = document.querySelector('.menu-toggle');
+    const menu_fechar = document.querySelector('.menu-close');
+    const links =  document.querySelector('.links');
+ 
+    menu_toggle.addEventListener('click' , mostrarMenu);
+    menu_fechar.addEventListener('click' , fecharMenu);
+
+    function mostrarMenu() {
+        menu_toggle.classList.toggle('active');
+        links.style.display = 'flex';
+    }
+
+    function fecharMenu(e) {
+        e.preventDefault()
+        menu_toggle.classList.remove('active');
+        links.style.display = 'none';
+    }
     
 }
+toggle()
 
-function cadastro(evento) {
-    evento.preventDefault();
-
-    document.querySelector(".cadastroTransacoes").addEventListener('click' , () =>{
-        document.querySelector("#nome").focus()
-    })
-}
