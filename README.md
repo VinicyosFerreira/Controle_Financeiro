@@ -11,10 +11,16 @@ O projeto possui uma estrutura de uma página única, seu uso é bastante intuit
 
 **Front-end:** Javascript, HTML e CSS
 
-
 ## Propósito 🎯
 
 Esse projeto é usado para fins de aprendizagem e crescimento, seu objetivo é propor a utilização prática demonstrando conhecimento nas tecnologias web e desenvolvimento front-end usando html para estruturação de layout, css visando estilização e efeitos visuais, mais o js para validações e interações com o usuário
+
+## Como rodar 🚀 ##
+#### Para clonar projeto em sua máquina ####
+git clone https://github.com/VinicyosFerreira/Controle_Financeiro.git
+
+Abra o arquivo index.html no seu navegador. Ou se preferir, use LiveServer(extensão do vscode) para rodar localmente
+
 ## Links 🔗
 
 **App rodando:** [Confira o projeto rodando]  https://vinicyosferreira.github.io/Controle_Financeiro/
